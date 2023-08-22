@@ -23,15 +23,15 @@
     <title>Pokedex</title>
   </head>
   <body>
-    <main class="pokemon">
+    <main>
       <header class="details">
         <a href="index.html" class="arrow"><i class="ph ph-arrow-left"></i></a>
-        <h1 class="name">Ditto</h1>
+        <h1 class="pokemon_name">Ditto</h1>
         <div class="characteristics">
-          <ol class="types">
-            <li class="type">normal</li>
+          <ol class="pokemon_types">
+            <li class="pokemon_type">normal</li>
           </ol>
-          <span class="number">#001</span>
+          <span class="pokemon_number">#001</span>
         </div>
       </header>
       <section class="principal">
@@ -96,17 +96,11 @@
               <div class="progress"></div>
             </div>
           </li>
-          <li class="stat">
-            <div class="values">
-              <p class="atributte">Total</p>
-              <p class="value">50</p>
-            </div>
-            <div class="indicator">
-              <div class="progress"></div>
-            </div>
-          </li>
         </ol>
       </section>
     </main>
+    <script src="/assets/js/pokemon-model.js"></script>
+    <script src="/assets/js/poke-api.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,4 @@
-.pokemon {
+main {
     background-color: #a6a877;
     height: 100vh;
     margin: 0 auto;
@@ -10,7 +10,6 @@
 
 .details{
     padding: 2rem;
-
     display: flex;
     align-items: start;
     flex-direction: column;
@@ -24,9 +23,10 @@
     margin-bottom: 1rem;
 }
 
-.name{
+.pokemon_name{
     color: #fff;
     margin: 0;
+    text-transform: capitalize;
 }
 
 .characteristics{
@@ -36,15 +36,14 @@
     width: 100%;
 }
 
-.types {
+.pokemon_types {
     padding-left: .25rem;
     margin: 0;
     list-style: none;
 }
 
-.type {
+.pokemon_type {
     color: #fff;
-    background-color: #a6a877;
     padding: .25rem .5rem;
     margin: .25rem 0;
     font-size: .625rem;
@@ -53,7 +52,7 @@
     text-align: center;
 }
 
-.number{
+.pokemon_number{
     font-size: 1rem;
     color: #fff;
 }
@@ -107,7 +106,6 @@
 }
 
 .progress{
-    background-color: #a6a877;
     width: 50%;
     height: .625rem;
     border-radius: 2rem;
@@ -130,7 +128,7 @@
 }
 
 @media screen and (min-width: 800px) {
-    .pokemon {
+    main {
         border-radius: 2rem;
     }
 

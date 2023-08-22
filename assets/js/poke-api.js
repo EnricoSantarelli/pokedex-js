@@ -14,7 +14,21 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
 
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
+    pokemon.hp = pokeDetail.stats[0].base_stat
+    pokemon.attack = pokeDetail.stats[1].base_stat
+    pokemon.defense = pokeDetail.stats[2].base_stat
+    pokemon.sp_atk = pokeDetail.stats[3].base_stat
+    pokemon.sp_def = pokeDetail.stats[4].base_stat
+    pokemon.speed = pokeDetail.stats[5].base_stat
+
     return pokemon
+}
+
+pokeApi.getPokemonCard = (name) => {
+    const url = `https://pokeapi.co/api/v2/pokemon/${name}`
+    return fetch(url)
+    .then((response) => response.json())
+    .then(convertPokeApiDetailToPokemon)
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
