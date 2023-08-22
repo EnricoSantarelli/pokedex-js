@@ -1,6 +1,7 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
+
 const maxRecords = 151
 const limit = 10
 let offset = 0;
@@ -25,8 +26,19 @@ function convertPokemonToLi(pokemon) {
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
+        const newHtml = pokemons.map(
+            convertPokemonToLi
+            ).join('')
         pokemonList.innerHTML += newHtml
+
+    for(let element of pokemonList.children){
+        element.addEventListener(
+            'click', () => {
+                window.location.href = 'pokemon.html'
+            }
+        )
+    }
+
     })
 }
 
@@ -45,3 +57,12 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+/* pokemonList.addEventListener('click', (event) => {
+    console.log(event.target.innerHTML);
+    //window.location.href = '/pokemon.html'
+}) */
+
+
+
+
