@@ -106,7 +106,6 @@ main {
 }
 
 .progress{
-    width: 50%;
     height: .625rem;
     border-radius: 2rem;
 }

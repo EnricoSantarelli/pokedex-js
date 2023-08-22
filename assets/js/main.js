@@ -116,10 +116,18 @@ function loadPokemonItens(offset, limit) {
         pokeApi
           .getPokemonCard(element.children[1].innerHTML)
           .then((pokemon) => {
-            const newCardHtml = convertPokemonToCard(pokemon);
-            const body = document.getElementsByTagName("body");
-            console.log(body);
+            const newCardHtml = convertPokemonToCard(pokemon)
+            const body = document.getElementsByTagName("body")
             body[0].innerHTML = newCardHtml;
+            const bars  = document.getElementsByClassName("progress")
+
+            bars[0].style.width =`${pokemon.hp}%`
+            bars[1].style.width =`${pokemon.attack}%`
+            bars[2].style.width =`${pokemon.defense}%`
+            bars[3].style.width =`${pokemon.sp_atk}%`
+            bars[4].style.width =`${pokemon.sp_def}%`
+            bars[5].style.width =`${pokemon.speed}%`
+
           });
       });
     }
