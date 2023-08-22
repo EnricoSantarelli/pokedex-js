@@ -112,3 +112,29 @@
     height: .625rem;
     border-radius: 2rem;
 }
+
+@media screen and (max-width: 380px) {
+    .stat {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .values{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        height: 2rem;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    .pokemon {
+        border-radius: 2rem;
+    }
+
+    .principal{
+        border-radius: 2rem;
+    }
+}
